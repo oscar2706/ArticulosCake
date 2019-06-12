@@ -31,18 +31,31 @@
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Proyecto BM</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Todos los articulos<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Por tema</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Más gustados</a>
+                </li>
             </ul>
         </div>
+        <form class="form-inline" action="">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Iniciar sesión</button>
+        </form>
+    </nav>
+    <nav class="top-bar expanded" data-topbar role="navigation">
+        <h1><a href=""><?= $this->fetch('title') ?></a></h1>
     </nav>
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
